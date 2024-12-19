@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-container">
+            <img src="" id="" alt="DOG IMAGE">
+        </div>
+        <div class="dog-button">
+            <div class="button-border">
+                <div class="button-base">
+                    <button class="button" id="randomImageGenrator">Random Dog</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function asyncfun() {
+            const api = "https://dog.ceo/api/breeds/image/random"
+
+            try {
+                const fetchingData = await fetch(api)
+                console.log(fetchingData);
+
+                fetch(api).then((response) => response.json())
+                    .then((data) => {
+                        let img = document.querySelector("img")
+                        img.src = data.message
+                        console.log(img);
+
+                    })
+
+            } catch (error) {
+                console.log(error);
+            }
+            const randomImageGenrator = document.querySelector("#randomImageGenrator")
+            randomImageGenrator.addEventListener("click", function () {
+                location.reload()
+            })
+        }
+
+        asyncfun()
+
+
+    </script>
+</body>
+
+</html>
