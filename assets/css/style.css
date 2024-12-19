@@ -16,11 +16,11 @@ img {
     max-width: 900px;
     height: 600px;
     border: 10px solid;
-    border-left-color: #e7b8b4;
-    border-top-color: #f8c9c5;
-    border-bottom-color: #4e1814;
-    border-right-color: #79241e;
-    object-fit: cover;
+    border-left-color: #FFCCE1;
+    border-top-color: #FFCCE1;
+    border-bottom-color: #E195AB;
+    border-right-color: #E195AB;
+    object-fit: fill;
     object-position: center;
 }
 
